@@ -5,7 +5,7 @@ from threading import *
 from winsound import Beep
 from customtkinter import *
 
-set_default_color_theme("dark-blue")
+set_appearance_mode("dark")
 
 class Sound:
     def ok():
@@ -18,5 +18,6 @@ class Sound:
 root = CTk()
 root.geometry('550x400')
 root.title('Css Cheat Crysis')
+root.iconbitmap('lannister_115487 (min).ico')
 
 root.mainloop()
