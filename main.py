@@ -5,6 +5,7 @@ from threading import *
 from winsound import Beep
 from customtkinter import *
 
+
 class Sound:
     def ok():
         Beep(600,200)
@@ -13,3 +14,8 @@ class Sound:
     def warning():
         Beep(200,900)
         
+root = CTk()
+root.geometry('550x400')
+root.title('Css Cheat Crysis')
+
+root.mainloop()
