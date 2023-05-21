@@ -1,9 +1,11 @@
 import time
 import os
+import pyautogui
 
 from threading import *
 from winsound import Beep
 from customtkinter import *
+from tkinter import *
 
 set_appearance_mode("dark")
 
@@ -14,7 +16,20 @@ class Sound:
         Beep(300,600)
     def warning():
         Beep(200,900)
-        
+
+def no_rec_main(event):
+    x, y = pyautogui.position()
+
+    print('x : {} | y : {}'.format(x,y))
+
+    current_x, current_y = pyautogui.position()
+
+    if current_x != x or current_y != y:
+        pyautogui.moveTo(current_x,current_y + 10)
+        x, y = current_x, current_y
+        print('x : {} | y : {}'.format(x,y))
+
+
 root = CTk()
 root.geometry('550x400')
 root.resizable(width=False,height=False)
@@ -27,11 +42,10 @@ Title_lb.pack(padx=12,pady=10)
 opttsions = CTkFrame(root)
 opttsions.pack(padx=23,pady=20)
 
-
 BHOP_btn = CTkButton(opttsions,text='Bhop',font=('bold',15))
 BHOP_btn.pack(padx=12,pady=10)
 
-no_rec_btn = CTkButton(opttsions,text='No Recoil',font=('bold',15))
+no_rec_btn = CTkButton(opttsions,text='No Recoil',font=('bold',15),command=no_rec_main)
 no_rec_btn.pack(padx=12,pady=10)
 
 
