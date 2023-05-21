@@ -22,12 +22,14 @@ def no_rec_main():
 
     print('x : {} | y : {}'.format(x,y))
 
-    current_x, current_y = pyautogui.position()
+    for i in range(2):
 
-    if current_x != x or current_y != y:
-        pyautogui.moveTo(current_x,current_y + 10)
-        x, y = current_x, current_y
-        print('x : {} | y : {}'.format(x,y))
+        current_x, current_y = pyautogui.position()
+
+        if current_x != x or current_y != y:
+            pyautogui.moveTo(current_x,current_y + 10)
+            x, y = current_x, current_y
+            print('x : {} | y : {}'.format(x,y))
 
 
 root = CTk()
