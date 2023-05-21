@@ -5,6 +5,7 @@ from threading import *
 from winsound import Beep
 from customtkinter import *
 
+set_default_color_theme("dark-blue")
 
 class Sound:
     def ok():
