@@ -17,7 +17,7 @@ class Sound:
     def warning():
         Beep(200,900)
 
-def no_rec_main(event):
+def no_rec_main():
     x, y = pyautogui.position()
 
     print('x : {} | y : {}'.format(x,y))
