@@ -1,5 +1,5 @@
 #include <iostream>
-#incl
+#inclu
 using namespace std;
 
 int main()
